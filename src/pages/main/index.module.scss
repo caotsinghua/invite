@@ -1,0 +1,87 @@
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  font-family: font-normal, Arial, "Noto Emoji";
+}
+.choseText {
+  font-family: font-chose, Arial, "Noto Emoji";
+  font-size: 36px;
+  margin-top: 16px;
+}
+.normalText {
+  font-family: font-normal, Arial, "Noto Emoji";
+  font-size: 16px;
+  letter-spacing: 4px;
+  margin-top: 6px;
+}
+.pokemons {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  img {
+    width: 360px;
+    height: auto;
+  }
+}
+.name {
+  font-size: 48px;
+  font-family: font-intro, Arial, "Noto Emoji";
+  margin-bottom: 30px;
+}
+
+.time {
+  font-family: font-time, Arial, "Noto Emoji";
+  display: flex;
+  margin-bottom: 10px;
+  .largeTime {
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 2px;
+  }
+}
+
+.smallTime {
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+.line {
+  width: 2px;
+  height: 32px;
+  background-color: rgba(0, 0, 0);
+  display: block;
+  margin: 0 10px;
+}
+
+.address {
+  font-family: font-normal, Arial, "Noto Emoji";
+  letter-spacing: 2px;
+  margin-top: 40px;
+}
+
+.horLine {
+  height: 2PX;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 60px;
+  margin-top: 24px;
+}
+
+.timeLine {
+  margin-top: 24px;
+  .timeLineItem {
+    margin-top: 8px;
+  }
+  .timeLineItem_time {
+    margin-right: 28px;
+  }
+}
+
+
+
+.tips {
+  margin-top: 40px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+}

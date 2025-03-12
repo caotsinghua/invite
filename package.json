@@ -7,10 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node index.js"
   },
   "dependencies": {
     "amfe-flexible": "^2.2.1",
+    "express": "^4.21.2",
     "motion": "^12.5.0",
     "postcss-pxtorem": "^6.1.0",
     "react": "^19.0.0",

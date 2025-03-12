@@ -15,21 +15,47 @@ export const VideoIntro = ({ onPlayEnd }) => {
     };
 
     video.addEventListener("ended", cb);
+
+    function doPlay() {
+      if (!WeixinJSBridge) {
+        return;
+      }
+      WeixinJSBridge.invoke("getNetworkType", {}, function (e) {
+        video.play();
+      });
+    }
+
+    if (window.WeixinJSBridge) {
+      doPlay();
+    } else {
+      document.addEventListener(
+        "WeixinJSBridgeReady",
+        function () {
+          doPlay();
+        },
+        false
+      );
+    }
+
     return () => {
       video.removeEventListener("ended", cb);
     };
   }, []);
   return (
     <div className={styles.container}>
-      <div className={styles.top}></div>
-      <div className={styles.bottom}></div>
       <video
         ref={videoRef}
         src={introVideo}
         autoPlay
         muted
-        preload="auto"
+        x5-video-player-type="h5"
+        webkit-playsinline="true"
+        x-webkit-airplay="true"
+        playsinline="true"
+        x5-video-player-fullscreen="true"
       ></video>
+      <div className={styles.top}></div>
+      <div className={styles.bottom}></div>
     </div>
   );
 };

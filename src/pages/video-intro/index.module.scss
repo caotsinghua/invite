@@ -11,6 +11,9 @@
     &::backdrop {
       background: transparent;
     }
+    &::-webkit-media-controls {
+      display: none !important;
+    }
   }
 }
 

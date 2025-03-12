@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./app.module.scss";
 import { Intro } from "./pages/intro";
 import { Main } from "./pages/main";
+import { VideoIntro } from "./pages/video-intro";
 
 function App() {
   const [showMain, setShowMain] = useState(false);
@@ -9,6 +10,13 @@ function App() {
   return (
     <div className={styles.container}>
       {!showMain && (
+        <VideoIntro
+          onPlayEnd={() => {
+            setShowMain(true);
+          }}
+        />
+      )}
+      {/* {!showMain && (
         <div
           onClick={() => {
             setShowMain(true);
@@ -16,7 +24,7 @@ function App() {
         >
           <Intro />
         </div>
-      )}
+      )} */}
       {showMain && <Main />}
     </div>
   );
